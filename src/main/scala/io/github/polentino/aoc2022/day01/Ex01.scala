@@ -7,13 +7,13 @@ object Ex01 {
 
   private def solve(lines: List[String]): Seq[Int] =
     lines
-      .foldLeft(Accumulator.empty) { case (accumulator, current) =>
+      .foldLeft(Accumulator()) { case (accumulator, current) =>
         if (current.isBlank) accumulator.advance
         else accumulator.store(Integer.parseInt(current))
       }
       .sumAndSort
 
-  private case class Accumulator(pastLines: List[List[Int]], currentLines: List[Int]) {
+  private case class Accumulator(pastLines: List[List[Int]] = Nil, currentLines: List[Int] = Nil) {
 
     def advance: Accumulator =
       copy(pastLines = pastLines :+ currentLines, currentLines = List.empty)
@@ -25,9 +25,5 @@ object Ex01 {
       (pastLines :+ currentLines)
         .map(_.sum)
         .sorted(Ordering.Int.reverse)
-  }
-
-  private object Accumulator {
-    def empty: Accumulator = Accumulator(Nil, Nil)
   }
 }
