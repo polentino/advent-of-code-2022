@@ -5,14 +5,13 @@ object Ex01 {
   def findMax(lines: List[String]): Int         = solve(lines).head
   def findTopThreeMax(lines: List[String]): Int = solve(lines).take(3).sum
 
-  private def solve(lines: List[String]): Seq[Int] = {
+  private def solve(lines: List[String]): Seq[Int] =
     lines
       .foldLeft(Accumulator.empty) { case (accumulator, current) =>
         if (current.isBlank) accumulator.advance
         else accumulator.store(Integer.parseInt(current))
       }
       .sumAndSort
-  }
 
   private case class Accumulator(pastLines: List[List[Int]], currentLines: List[Int]) {
 
