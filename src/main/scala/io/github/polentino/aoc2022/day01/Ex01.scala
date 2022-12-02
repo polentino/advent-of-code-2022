@@ -2,7 +2,10 @@ package io.github.polentino.aoc2022.day01
 
 object Ex01 {
 
-  def solve(lines: List[String]): Seq[Int] = {
+  def findMax(lines: List[String]): Int         = solve(lines).head
+  def findTopThreeMax(lines: List[String]): Int = solve(lines).take(3).sum
+
+  private def solve(lines: List[String]): Seq[Int] = {
     val (listAcc, acc) = lines
       .foldLeft((List.empty[List[Int]], List.empty[Int])) { case ((listAcc, acc), current) =>
         if (current.isBlank) (listAcc :+ acc, List.empty)

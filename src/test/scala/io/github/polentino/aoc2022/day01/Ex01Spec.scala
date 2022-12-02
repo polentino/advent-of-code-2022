@@ -26,22 +26,22 @@ object Ex01Spec extends ZIOSpecDefault {
     suite("Day 01")(
       suite("Exercise 1")(
         test("should find the correct solution [sample input]") {
-          val result = Ex01.solve(sampleInput).head
+          val result = Ex01.findMax(sampleInput)
           assertTrue(result == 24000)
         },
         test("should find the correct solution") {
-          val result = Ex01.solve(slurp("day01ex1.txt")).head
+          val result = Ex01.findMax(slurp("day01ex1.txt"))
           assertTrue(result == 69289)
         }
       ),
       suite("Exercise 2")(
         test("should find the correct solution [sample input]") {
-          val result = Ex01.solve(sampleInput)
-          assertTrue(result.take(3).sum == 45000)
+          val result = Ex01.findTopThreeMax(sampleInput)
+          assertTrue(result == 45000)
         },
         test("should find the correct solution") {
-          val result = Ex01.solve(slurp("day01ex1.txt"))
-          assertTrue(result.take(3).sum == 205615)
+          val result = Ex01.findTopThreeMax(slurp("day01ex1.txt"))
+          assertTrue(result == 205615)
         }
       )
     )
