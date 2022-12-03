@@ -16,7 +16,7 @@ object Ex01 {
   private case class Accumulator(pastLines: List[List[Int]] = Nil, currentLines: List[Int] = Nil) {
 
     def advance: Accumulator =
-      copy(pastLines = pastLines :+ currentLines, currentLines = List.empty)
+      copy(pastLines = pastLines :+ currentLines, currentLines = Nil)
 
     def store(value: Int): Accumulator =
       copy(currentLines = currentLines :+ value)
