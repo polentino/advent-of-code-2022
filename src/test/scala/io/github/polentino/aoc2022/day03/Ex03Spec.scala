@@ -1,9 +1,11 @@
 package io.github.polentino.aoc2022.day03
 
-import io.github.polentino.aoc2022.TestUtils.slurp
 import zio.test._
 
-object Ex03Spec extends ZIOSpecDefault{
+import io.github.polentino.aoc2022.TestUtils.slurp
+
+object Ex03Spec extends ZIOSpecDefault {
+
   private val sampleInput =
     """
       |vJrwpWtwJgWrhcsFMMfFFhFp

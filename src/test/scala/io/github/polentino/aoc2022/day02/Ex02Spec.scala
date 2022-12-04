@@ -1,7 +1,8 @@
 package io.github.polentino.aoc2022.day02
 
-import io.github.polentino.aoc2022.TestUtils.slurp
 import zio.test.*
+
+import io.github.polentino.aoc2022.TestUtils.slurp
 
 object Ex02Spec extends ZIOSpecDefault {
 

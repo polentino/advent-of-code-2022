@@ -29,9 +29,9 @@ object Ex03 {
 
     def computePriorities: Int = (pastGroups :+ currentGroup)
       .map { group =>
-        val firstLine        = group(0).toCharArray
-        val secondLine       = group(1).toCharArray
-        val thirdLine        = group(2).toCharArray
+        val firstLine  = group(0).toCharArray
+        val secondLine = group(1).toCharArray
+        val thirdLine  = group(2).toCharArray
         (firstLine intersect secondLine intersect thirdLine)
           .distinct
           .map(assignScore)
