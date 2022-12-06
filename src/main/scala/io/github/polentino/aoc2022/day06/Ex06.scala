@@ -3,7 +3,7 @@ package io.github.polentino.aoc2022.day06
 object Ex06 {
 
   def startOfMarker(line: String, size: Int = 4): Int =
-    line.sliding(size, 1)
+    line.sliding(size)
       .zipWithIndex
       .toList
       .find(_._1.toSet.size == size)
