@@ -3,8 +3,6 @@ package io.github.polentino.aoc2022.day08
 import zio.test.*
 
 import io.github.polentino.aoc2022.TestUtils.slurp
-import io.github.polentino.aoc2022.day07.Ex07.FS.*
-import io.github.polentino.aoc2022.day07.Ex07.TreeBuilder
 
 object Ex08Spec extends ZIOSpecDefault {
 
