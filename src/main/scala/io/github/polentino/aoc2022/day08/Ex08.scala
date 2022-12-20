@@ -36,13 +36,13 @@ object Ex08 {
 
     def count(trees: Array[Int]) = {
       val idx = trees.indexWhere(_ >= height)
-      if ( idx == -1 ) trees.length else idx + 1
+      if (idx == -1) trees.length else idx + 1
     }
 
-    val top = count(treeMap.slice(0, y).map(_ (x)).reverse)
-    val bottom = count(treeMap.slice(y + 1, maxY).map(_ (x)))
+    val top    = count(treeMap.slice(0, y).map(_(x)).reverse)
+    val bottom = count(treeMap.slice(y + 1, maxY).map(_(x)))
 
-    val left = count(treeMap(y).slice(0, x).reverse)
+    val left  = count(treeMap(y).slice(0, x).reverse)
     val right = count(treeMap(y).slice(x + 1, maxX))
     top * bottom * left * right
   }
