@@ -1,7 +1,8 @@
 package io.github.polentino.aoc2022.day07
 
-import io.github.polentino.aoc2022.day07.Ex07.FS.*
 import zio.*
+
+import io.github.polentino.aoc2022.day07.Ex07.FS.*
 
 object Ex07 {
 
