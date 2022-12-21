@@ -2,6 +2,10 @@
 
 Solutions implemented in Scala 3, using ZIO because I suspect it will get handy in the 2nd part of the challenge :)
 
+## Day 10
+
+See https://adventofcode.com/2022/day/10
+
 ## Day 09
 
 ```
